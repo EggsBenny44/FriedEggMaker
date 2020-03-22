@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Ed-W8-EkE">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="fried_egg_maker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.26666666666666666" green="0.31764705882352939" blue="0.28235294117647058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4qk-I5-YsI"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-293" y="21"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="u7O-7A-Mge">
+            <objects>
+                <viewController id="5Ed-W8-EkE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gyv-FC-YnZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ze1-RB-VBY">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cupboard" translatesAutoresizingMaskIntoConstraints="NO" id="USh-45-4gN">
+                                <rect key="frame" x="20" y="234" width="111" height="85"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame-top" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-pZ-3EJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="65"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen" translatesAutoresizingMaskIntoConstraints="NO" id="jDe-4C-tkA">
+                                <rect key="frame" x="61" y="667" width="353" height="209"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bird2" translatesAutoresizingMaskIntoConstraints="NO" id="lSr-H3-XHr">
+                                <rect key="frame" x="281" y="599" width="113" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcf-nw-srg">
+                                <rect key="frame" x="111.5" y="416" width="214" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="44"/>
+                                <state key="normal" title="S T A R T !">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="uaG-1M-d4P"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.2666666667" green="0.31764705879999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SgJ-pZ-3EJ" firstAttribute="trailing" secondItem="6Dz-jR-KLH" secondAttribute="trailing" id="5zq-vs-LhL"/>
+                            <constraint firstItem="ze1-RB-VBY" firstAttribute="top" secondItem="6Dz-jR-KLH" secondAttribute="top" id="ARe-L6-vqp"/>
+                            <constraint firstAttribute="bottom" secondItem="jDe-4C-tkA" secondAttribute="bottom" constant="20" symbolic="YES" id="EgO-cW-HjM"/>
+                            <constraint firstItem="jDe-4C-tkA" firstAttribute="trailing" secondItem="6Dz-jR-KLH" secondAttribute="trailing" id="FCl-EN-MwZ"/>
+                            <constraint firstItem="SgJ-pZ-3EJ" firstAttribute="top" secondItem="6Dz-jR-KLH" secondAttribute="top" id="afC-NU-Fom"/>
+                            <constraint firstItem="USh-45-4gN" firstAttribute="top" secondItem="6Dz-jR-KLH" secondAttribute="top" constant="190" id="bNe-oM-m6Q"/>
+                            <constraint firstItem="SgJ-pZ-3EJ" firstAttribute="top" secondItem="6Dz-jR-KLH" secondAttribute="top" id="bpc-sb-918"/>
+                            <constraint firstItem="USh-45-4gN" firstAttribute="leading" secondItem="Gyv-FC-YnZ" secondAttribute="leading" constant="20" symbolic="YES" id="eXq-od-qZx"/>
+                            <constraint firstItem="jDe-4C-tkA" firstAttribute="trailing" secondItem="6Dz-jR-KLH" secondAttribute="trailing" id="hFs-Jo-405"/>
+                            <constraint firstItem="6Dz-jR-KLH" firstAttribute="bottom" secondItem="ze1-RB-VBY" secondAttribute="bottom" id="mc4-P3-kLz"/>
+                            <constraint firstItem="SgJ-pZ-3EJ" firstAttribute="leading" secondItem="6Dz-jR-KLH" secondAttribute="leading" id="oco-O6-bmR"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Dz-jR-KLH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aZM-97-D1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1071.0144927536232" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="1080" height="1920"/>
+        <image name="bird2" width="1164" height="918"/>
+        <image name="cupboard" width="111" height="85"/>
+        <image name="frame-top" width="540" height="65"/>
+        <image name="kitchen" width="353" height="209"/>
+    </resources>
+</document>

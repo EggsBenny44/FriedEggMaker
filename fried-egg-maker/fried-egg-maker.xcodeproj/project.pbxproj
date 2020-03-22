@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BE23BD7A241F4D8200301297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23BD79241F4D8200301297 /* AppDelegate.swift */; };
+		BE23BD7C241F4D8200301297 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE23BD7B241F4D8200301297 /* GameScene.sks */; };
+		BE23BD7E241F4D8200301297 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE23BD7D241F4D8200301297 /* Actions.sks */; };
+		BE23BD80241F4D8200301297 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23BD7F241F4D8200301297 /* GameScene.swift */; };
+		BE23BD82241F4D8200301297 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23BD81241F4D8200301297 /* GameViewController.swift */; };
+		BE23BD85241F4D8200301297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE23BD83241F4D8200301297 /* Main.storyboard */; };
+		BE23BD87241F4D8600301297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE23BD86241F4D8600301297 /* Assets.xcassets */; };
+		BE23BD8A241F4D8600301297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE23BD88241F4D8600301297 /* LaunchScreen.storyboard */; };
+		BE23BD95241F4D8600301297 /* fried_egg_makerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23BD94241F4D8600301297 /* fried_egg_makerTests.swift */; };
+		BE23BDA0241F4D8600301297 /* fried_egg_makerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23BD9F241F4D8600301297 /* fried_egg_makerUITests.swift */; };
+		BE23BDB02420CF0600301297 /* FrameTop.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE23BDAF2420CF0600301297 /* FrameTop.sks */; };
+		BE99D67E2427704000085734 /* fail.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE99D67D2427704000085734 /* fail.sks */; };
+		BE99D6802427705C00085734 /* success.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE99D67F2427705C00085734 /* success.sks */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BE23BD91241F4D8600301297 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE23BD6E241F4D8200301297 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE23BD75241F4D8200301297;
+			remoteInfo = "fried-egg-maker";
+		};
+		BE23BD9C241F4D8600301297 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BE23BD6E241F4D8200301297 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BE23BD75241F4D8200301297;
+			remoteInfo = "fried-egg-maker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BE23BD76241F4D8200301297 /* fried-egg-maker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fried-egg-maker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE23BD79241F4D8200301297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BE23BD7B241F4D8200301297 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		BE23BD7D241F4D8200301297 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		BE23BD7F241F4D8200301297 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		BE23BD81241F4D8200301297 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		BE23BD84241F4D8200301297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BE23BD86241F4D8600301297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BE23BD89241F4D8600301297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BE23BD8B241F4D8600301297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE23BD90241F4D8600301297 /* fried-egg-makerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fried-egg-makerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE23BD94241F4D8600301297 /* fried_egg_makerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fried_egg_makerTests.swift; sourceTree = "<group>"; };
+		BE23BD96241F4D8600301297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE23BD9B241F4D8600301297 /* fried-egg-makerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fried-egg-makerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE23BD9F241F4D8600301297 /* fried_egg_makerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fried_egg_makerUITests.swift; sourceTree = "<group>"; };
+		BE23BDA1241F4D8700301297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE23BDAF2420CF0600301297 /* FrameTop.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = FrameTop.sks; sourceTree = "<group>"; };
+		BE99D67D2427704000085734 /* fail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = fail.sks; sourceTree = "<group>"; };
+		BE99D67F2427705C00085734 /* success.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = success.sks; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BE23BD73241F4D8200301297 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE23BD8D241F4D8600301297 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE23BD98241F4D8600301297 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BE23BD6D241F4D8200301297 = {
+			isa = PBXGroup;
+			children = (
+				BE23BD78241F4D8200301297 /* fried-egg-maker */,
+				BE23BD93241F4D8600301297 /* fried-egg-makerTests */,
+				BE23BD9E241F4D8600301297 /* fried-egg-makerUITests */,
+				BE23BD77241F4D8200301297 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BE23BD77241F4D8200301297 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BE23BD76241F4D8200301297 /* fried-egg-maker.app */,
+				BE23BD90241F4D8600301297 /* fried-egg-makerTests.xctest */,
+				BE23BD9B241F4D8600301297 /* fried-egg-makerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BE23BD78241F4D8200301297 /* fried-egg-maker */ = {
+			isa = PBXGroup;
+			children = (
+				BE23BD79241F4D8200301297 /* AppDelegate.swift */,
+				BE23BD7B241F4D8200301297 /* GameScene.sks */,
+				BE23BD7D241F4D8200301297 /* Actions.sks */,
+				BE23BD7F241F4D8200301297 /* GameScene.swift */,
+				BE23BD81241F4D8200301297 /* GameViewController.swift */,
+				BE23BD83241F4D8200301297 /* Main.storyboard */,
+				BE23BD86241F4D8600301297 /* Assets.xcassets */,
+				BE23BD88241F4D8600301297 /* LaunchScreen.storyboard */,
+				BE23BD8B241F4D8600301297 /* Info.plist */,
+				BE23BDAF2420CF0600301297 /* FrameTop.sks */,
+				BE99D67D2427704000085734 /* fail.sks */,
+				BE99D67F2427705C00085734 /* success.sks */,
+			);
+			path = "fried-egg-maker";
+			sourceTree = "<group>";
+		};
+		BE23BD93241F4D8600301297 /* fried-egg-makerTests */ = {
+			isa = PBXGroup;
+			children = (
+				BE23BD94241F4D8600301297 /* fried_egg_makerTests.swift */,
+				BE23BD96241F4D8600301297 /* Info.plist */,
+			);
+			path = "fried-egg-makerTests";
+			sourceTree = "<group>";
+		};
+		BE23BD9E241F4D8600301297 /* fried-egg-makerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BE23BD9F241F4D8600301297 /* fried_egg_makerUITests.swift */,
+				BE23BDA1241F4D8700301297 /* Info.plist */,
+			);
+			path = "fried-egg-makerUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BE23BD75241F4D8200301297 /* fried-egg-maker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE23BDA4241F4D8700301297 /* Build configuration list for PBXNativeTarget "fried-egg-maker" */;
+			buildPhases = (
+				BE23BD72241F4D8200301297 /* Sources */,
+				BE23BD73241F4D8200301297 /* Frameworks */,
+				BE23BD74241F4D8200301297 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "fried-egg-maker";
+			productName = "fried-egg-maker";
+			productReference = BE23BD76241F4D8200301297 /* fried-egg-maker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BE23BD8F241F4D8600301297 /* fried-egg-makerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE23BDA7241F4D8700301297 /* Build configuration list for PBXNativeTarget "fried-egg-makerTests" */;
+			buildPhases = (
+				BE23BD8C241F4D8600301297 /* Sources */,
+				BE23BD8D241F4D8600301297 /* Frameworks */,
+				BE23BD8E241F4D8600301297 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE23BD92241F4D8600301297 /* PBXTargetDependency */,
+			);
+			name = "fried-egg-makerTests";
+			productName = "fried-egg-makerTests";
+			productReference = BE23BD90241F4D8600301297 /* fried-egg-makerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BE23BD9A241F4D8600301297 /* fried-egg-makerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE23BDAA241F4D8700301297 /* Build configuration list for PBXNativeTarget "fried-egg-makerUITests" */;
+			buildPhases = (
+				BE23BD97241F4D8600301297 /* Sources */,
+				BE23BD98241F4D8600301297 /* Frameworks */,
+				BE23BD99241F4D8600301297 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BE23BD9D241F4D8600301297 /* PBXTargetDependency */,
+			);
+			name = "fried-egg-makerUITests";
+			productName = "fried-egg-makerUITests";
+			productReference = BE23BD9B241F4D8600301297 /* fried-egg-makerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BE23BD6E241F4D8200301297 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "egga-benny.com";
+				TargetAttributes = {
+					BE23BD75241F4D8200301297 = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					BE23BD8F241F4D8600301297 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = BE23BD75241F4D8200301297;
+					};
+					BE23BD9A241F4D8600301297 = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = BE23BD75241F4D8200301297;
+					};
+				};
+			};
+			buildConfigurationList = BE23BD71241F4D8200301297 /* Build configuration list for PBXProject "fried-egg-maker" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BE23BD6D241F4D8200301297;
+			productRefGroup = BE23BD77241F4D8200301297 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BE23BD75241F4D8200301297 /* fried-egg-maker */,
+				BE23BD8F241F4D8600301297 /* fried-egg-makerTests */,
+				BE23BD9A241F4D8600301297 /* fried-egg-makerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BE23BD74241F4D8200301297 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE23BD85241F4D8200301297 /* Main.storyboard in Resources */,
+				BE23BD7C241F4D8200301297 /* GameScene.sks in Resources */,
+				BE23BD87241F4D8600301297 /* Assets.xcassets in Resources */,
+				BE99D6802427705C00085734 /* success.sks in Resources */,
+				BE99D67E2427704000085734 /* fail.sks in Resources */,
+				BE23BDB02420CF0600301297 /* FrameTop.sks in Resources */,
+				BE23BD8A241F4D8600301297 /* LaunchScreen.storyboard in Resources */,
+				BE23BD7E241F4D8200301297 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE23BD8E241F4D8600301297 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE23BD99241F4D8600301297 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BE23BD72241F4D8200301297 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE23BD80241F4D8200301297 /* GameScene.swift in Sources */,
+				BE23BD82241F4D8200301297 /* GameViewController.swift in Sources */,
+				BE23BD7A241F4D8200301297 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE23BD8C241F4D8600301297 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE23BD95241F4D8600301297 /* fried_egg_makerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BE23BD97241F4D8600301297 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE23BDA0241F4D8600301297 /* fried_egg_makerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BE23BD92241F4D8600301297 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE23BD75241F4D8200301297 /* fried-egg-maker */;
+			targetProxy = BE23BD91241F4D8600301297 /* PBXContainerItemProxy */;
+		};
+		BE23BD9D241F4D8600301297 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BE23BD75241F4D8200301297 /* fried-egg-maker */;
+			targetProxy = BE23BD9C241F4D8600301297 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BE23BD83241F4D8200301297 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE23BD84241F4D8200301297 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BE23BD88241F4D8600301297 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BE23BD89241F4D8600301297 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BE23BDA2241F4D8700301297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BE23BDA3241F4D8700301297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BE23BDA5241F4D8700301297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "fried-egg-maker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "egga-benny.fried-egg-maker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BE23BDA6241F4D8700301297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "fried-egg-maker/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "egga-benny.fried-egg-maker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BE23BDA8241F4D8700301297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "fried-egg-makerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "egga-benny.fried-egg-makerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fried-egg-maker.app/fried-egg-maker";
+			};
+			name = Debug;
+		};
+		BE23BDA9241F4D8700301297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "fried-egg-makerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "egga-benny.fried-egg-makerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fried-egg-maker.app/fried-egg-maker";
+			};
+			name = Release;
+		};
+		BE23BDAB241F4D8700301297 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "fried-egg-makerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "egga-benny.fried-egg-makerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "fried-egg-maker";
+			};
+			name = Debug;
+		};
+		BE23BDAC241F4D8700301297 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "fried-egg-makerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "egga-benny.fried-egg-makerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "fried-egg-maker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BE23BD71241F4D8200301297 /* Build configuration list for PBXProject "fried-egg-maker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE23BDA2241F4D8700301297 /* Debug */,
+				BE23BDA3241F4D8700301297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE23BDA4241F4D8700301297 /* Build configuration list for PBXNativeTarget "fried-egg-maker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE23BDA5241F4D8700301297 /* Debug */,
+				BE23BDA6241F4D8700301297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE23BDA7241F4D8700301297 /* Build configuration list for PBXNativeTarget "fried-egg-makerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE23BDA8241F4D8700301297 /* Debug */,
+				BE23BDA9241F4D8700301297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE23BDAA241F4D8700301297 /* Build configuration list for PBXNativeTarget "fried-egg-makerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BE23BDAB241F4D8700301297 /* Debug */,
+				BE23BDAC241F4D8700301297 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BE23BD6E241F4D8200301297 /* Project object */;
+}
