@@ -10,12 +10,18 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+var global_score = 0
+var global_lives = 5
+var global_eggInterval = 10.0
+
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
             if let view = self.view as! SKView? {
+                global_score = 0
+                global_lives = 5
+                global_eggInterval = 10.0
                 // Load the SKScene from 'GameScene.sks'
                 if let scene = SKScene(fileNamed: "GameScene") {
                     // Set the scale mode to scale to fit the window
@@ -27,8 +33,8 @@ class GameViewController: UIViewController {
                 
                 
                 
-                view.showsFPS = true
-                view.showsNodeCount = true
+                view.showsFPS = false
+                view.showsNodeCount = false
             }
         }
         

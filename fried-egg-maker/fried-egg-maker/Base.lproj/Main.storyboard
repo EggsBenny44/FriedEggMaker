@@ -13,7 +13,7 @@
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="fried_egg_maker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Play" id="BV1-FR-VrT" customClass="GameViewController" customModule="fried_egg_maker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -25,58 +25,193 @@
             </objects>
             <point key="canvasLocation" x="-293" y="21"/>
         </scene>
-        <!--View Controller-->
+        <!--Menu View Controller-->
         <scene sceneID="u7O-7A-Mge">
             <objects>
-                <viewController id="5Ed-W8-EkE" sceneMemberID="viewController">
+                <viewController id="5Ed-W8-EkE" customClass="MenuViewController" customModule="fried_egg_maker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gyv-FC-YnZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ze1-RB-VBY">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen" translatesAutoresizingMaskIntoConstraints="NO" id="jDe-4C-tkA">
+                                <rect key="frame" x="61" y="667" width="353" height="209"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cupboard" translatesAutoresizingMaskIntoConstraints="NO" id="USh-45-4gN">
-                                <rect key="frame" x="20" y="234" width="111" height="85"/>
+                                <rect key="frame" x="20" y="154" width="111" height="85"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame-top" translatesAutoresizingMaskIntoConstraints="NO" id="SgJ-pZ-3EJ">
                                 <rect key="frame" x="0.0" y="44" width="414" height="65"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kitchen" translatesAutoresizingMaskIntoConstraints="NO" id="jDe-4C-tkA">
-                                <rect key="frame" x="61" y="667" width="353" height="209"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bird2" translatesAutoresizingMaskIntoConstraints="NO" id="lSr-H3-XHr">
-                                <rect key="frame" x="281" y="599" width="113" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcf-nw-srg">
-                                <rect key="frame" x="111.5" y="416" width="214" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="44"/>
-                                <state key="normal" title="S T A R T !">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="lcf-nw-srg">
+                                <rect key="frame" x="194" y="129" width="200" height="70"/>
+                                <color key="backgroundColor" red="0.2666666667" green="0.31764705879999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="PFK-Ks-Sgo"/>
+                                    <constraint firstAttribute="width" constant="200" id="zWl-Gh-Rqu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="29"/>
+                                <state key="normal" title="Let's cook!">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BV1-FR-VrT" kind="show" id="uaG-1M-d4P"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="goToPlay" id="uaG-1M-d4P"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="p33-Ct-89Z">
+                                <rect key="frame" x="20" y="254" width="374" height="410"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lL3-LM-EI0">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chef-left-catch" translatesAutoresizingMaskIntoConstraints="NO" id="U34-Rk-YZJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="i8n-ew-vwa"/>
+                                                    <constraint firstAttribute="width" constant="55" id="tPg-nG-s1h"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Catch and cook eggs on a hot frypan as possible as you can. Please tap the screen left and right to adjust your spot." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fx1-rS-f2I">
+                                                <rect key="frame" x="55" y="0.0" width="319" height="70"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDA-zb-THl">
+                                        <rect key="frame" x="0.0" y="80" width="374" height="45"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird" translatesAutoresizingMaskIntoConstraints="NO" id="haM-yC-wQM">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="3MP-bX-vZn"/>
+                                                    <constraint firstAttribute="width" constant="55" id="DpJ-5d-PVc"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="The hens gives you eggs." translatesAutoresizingMaskIntoConstraints="NO" id="tGp-kI-gd6">
+                                                <rect key="frame" x="55" y="0.0" width="319" height="45"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4cS-D6-omZ">
+                                        <rect key="frame" x="0.0" y="135" width="374" height="45"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg06" translatesAutoresizingMaskIntoConstraints="NO" id="MZ2-gw-3zO">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="Sto-53-9hi"/>
+                                                    <constraint firstAttribute="height" constant="45" id="Ytq-Oo-iPB"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You get 5 points if you catch them successfully. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AwT-3d-qbu">
+                                                <rect key="frame" x="55" y="0.0" width="319" height="45"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bkA-i3-NI9">
+                                        <rect key="frame" x="0.0" y="190" width="374" height="45"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg07" translatesAutoresizingMaskIntoConstraints="NO" id="ykL-Yj-Yce">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="IBv-LC-3c6"/>
+                                                    <constraint firstAttribute="height" constant="45" id="jE0-Ny-FZh"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You get 30 points if you can them successfully. " textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="eiG-ED-unc">
+                                                <rect key="frame" x="55" y="0.0" width="319" height="45"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WTc-74-W2U">
+                                        <rect key="frame" x="0.0" y="245" width="374" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chick" translatesAutoresizingMaskIntoConstraints="NO" id="Uvz-6P-4GB">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="zWf-kF-Tfp"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Be careful!! You lost a life if you catch them." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FQQ-Ui-dgN">
+                                                <rect key="frame" x="55" y="0.0" width="319" height="50"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VD0-3g-V8w">
+                                        <rect key="frame" x="0.0" y="305" width="374" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg10" translatesAutoresizingMaskIntoConstraints="NO" id="VKh-KM-fsU">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="V6c-dw-syo"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You can go to bonus stage for 30 seconds if you catch them successfully." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="N4c-VK-Jaf">
+                                                <rect key="frame" x="55" y="0.0" width="319" height="50"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K9d-IF-Ve4">
+                                        <rect key="frame" x="0.0" y="365" width="374" height="45"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="life" translatesAutoresizingMaskIntoConstraints="NO" id="krt-6w-arg">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="55" id="BAU-ih-k2Y"/>
+                                                    <constraint firstAttribute="height" constant="45" id="b1f-Qb-dco"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="You have maximum 5 life." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zZP-r3-ESi">
+                                                <rect key="frame" x="55" y="0.0" width="319" height="45"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.2666666667" green="0.31764705879999999" blue="0.28235294119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="SgJ-pZ-3EJ" firstAttribute="trailing" secondItem="6Dz-jR-KLH" secondAttribute="trailing" id="5zq-vs-LhL"/>
-                            <constraint firstItem="ze1-RB-VBY" firstAttribute="top" secondItem="6Dz-jR-KLH" secondAttribute="top" id="ARe-L6-vqp"/>
+                            <constraint firstItem="6Dz-jR-KLH" firstAttribute="trailing" secondItem="p33-Ct-89Z" secondAttribute="trailing" constant="20" id="614-6P-5sa"/>
+                            <constraint firstItem="USh-45-4gN" firstAttribute="top" secondItem="SgJ-pZ-3EJ" secondAttribute="bottom" constant="45" id="87h-JM-MlT"/>
                             <constraint firstAttribute="bottom" secondItem="jDe-4C-tkA" secondAttribute="bottom" constant="20" symbolic="YES" id="EgO-cW-HjM"/>
                             <constraint firstItem="jDe-4C-tkA" firstAttribute="trailing" secondItem="6Dz-jR-KLH" secondAttribute="trailing" id="FCl-EN-MwZ"/>
+                            <constraint firstItem="6Dz-jR-KLH" firstAttribute="trailing" secondItem="lcf-nw-srg" secondAttribute="trailing" constant="20" id="M3J-oL-eK5"/>
+                            <constraint firstItem="lcf-nw-srg" firstAttribute="top" secondItem="SgJ-pZ-3EJ" secondAttribute="bottom" constant="20" id="QQ4-oS-wlc"/>
+                            <constraint firstItem="6Dz-jR-KLH" firstAttribute="trailing" secondItem="lcf-nw-srg" secondAttribute="trailing" constant="20" id="aPr-Or-Kla"/>
                             <constraint firstItem="SgJ-pZ-3EJ" firstAttribute="top" secondItem="6Dz-jR-KLH" secondAttribute="top" id="afC-NU-Fom"/>
-                            <constraint firstItem="USh-45-4gN" firstAttribute="top" secondItem="6Dz-jR-KLH" secondAttribute="top" constant="190" id="bNe-oM-m6Q"/>
                             <constraint firstItem="SgJ-pZ-3EJ" firstAttribute="top" secondItem="6Dz-jR-KLH" secondAttribute="top" id="bpc-sb-918"/>
                             <constraint firstItem="USh-45-4gN" firstAttribute="leading" secondItem="Gyv-FC-YnZ" secondAttribute="leading" constant="20" symbolic="YES" id="eXq-od-qZx"/>
                             <constraint firstItem="jDe-4C-tkA" firstAttribute="trailing" secondItem="6Dz-jR-KLH" secondAttribute="trailing" id="hFs-Jo-405"/>
-                            <constraint firstItem="6Dz-jR-KLH" firstAttribute="bottom" secondItem="ze1-RB-VBY" secondAttribute="bottom" id="mc4-P3-kLz"/>
                             <constraint firstItem="SgJ-pZ-3EJ" firstAttribute="leading" secondItem="6Dz-jR-KLH" secondAttribute="leading" id="oco-O6-bmR"/>
+                            <constraint firstItem="p33-Ct-89Z" firstAttribute="top" secondItem="USh-45-4gN" secondAttribute="bottom" constant="15" id="q1Y-EQ-inX"/>
+                            <constraint firstItem="lcf-nw-srg" firstAttribute="top" secondItem="SgJ-pZ-3EJ" secondAttribute="bottom" constant="20" id="vcy-We-Dca"/>
+                            <constraint firstItem="p33-Ct-89Z" firstAttribute="leading" secondItem="6Dz-jR-KLH" secondAttribute="leading" constant="20" id="w3t-lG-AJt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Dz-jR-KLH"/>
                     </view>
+                    <connections>
+                        <outlet property="button" destination="lcf-nw-srg" id="koi-D4-oZR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aZM-97-D1w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,10 +219,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="1080" height="1920"/>
-        <image name="bird2" width="1164" height="918"/>
+        <image name="bird" width="60" height="50"/>
+        <image name="chef-left-catch" width="150" height="100"/>
+        <image name="chick" width="45" height="45"/>
         <image name="cupboard" width="111" height="85"/>
+        <image name="egg06" width="40" height="40"/>
+        <image name="egg07" width="40" height="40"/>
+        <image name="egg10" width="30" height="30"/>
         <image name="frame-top" width="540" height="65"/>
         <image name="kitchen" width="353" height="209"/>
+        <image name="life" width="80" height="80"/>
     </resources>
 </document>
