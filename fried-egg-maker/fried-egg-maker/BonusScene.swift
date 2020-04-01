@@ -71,7 +71,7 @@ class BonusScene: SKScene, SKPhysicsContactDelegate {
         
         self.chef = SKSpriteNode(imageNamed: "chef-left")
         self.chef!.scale(to: CGSize(width: frame.width / 5, height: frame.width / 5))
-        self.chef!.position = CGPoint(x: 0, y: self.floor!.frame.maxY + self.chef!.frame.height - 2)
+        self.chef!.position = CGPoint(x: 0, y: self.floor!.frame.maxY + self.chef!.frame.height / 2)
         self.chef!.physicsBody = SKPhysicsBody(circleOfRadius: self.chef!.frame.width * 0.1)
         
         self.chef!.physicsBody?.categoryBitMask = chefCategory
@@ -93,6 +93,7 @@ class BonusScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel.fontSize = 30
         scoreLabel.position = CGPoint(x: -frame.width / 2 + scoreLabel.frame.width / 2 + 20, y: lives[0].frame.minY - scoreLabel.frame.height - 10)
         addChild(scoreLabel)
+        
         let bestScore = UserDefaults.standard.integer(forKey: "bestScore")
         let bestScoreLabel = SKLabelNode(text: "Best Score: \(bestScore)")
         bestScoreLabel.fontName = "Chalkduster"
@@ -256,6 +257,8 @@ class BonusScene: SKScene, SKPhysicsContactDelegate {
                 global_score += 30
                 score = global_score
             }
+        } else if second.categoryBitMask == floorCategory {
+            firstNode.removeFromParent()
         }
     }
 

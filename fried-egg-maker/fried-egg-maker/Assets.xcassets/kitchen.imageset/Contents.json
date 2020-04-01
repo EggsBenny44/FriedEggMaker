@@ -2,17 +2,15 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "kitchen.png",
+      "filename" : "kitchenx3.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "kitchenx2.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "kitchenx3.png",
       "scale" : "3x"
     }
   ],

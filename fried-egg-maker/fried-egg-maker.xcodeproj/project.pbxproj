@@ -14,7 +14,6 @@
 		BE23BD82241F4D8200301297 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23BD81241F4D8200301297 /* GameViewController.swift */; };
 		BE23BD85241F4D8200301297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE23BD83241F4D8200301297 /* Main.storyboard */; };
 		BE23BD87241F4D8600301297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE23BD86241F4D8600301297 /* Assets.xcassets */; };
-		BE23BD8A241F4D8600301297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE23BD88241F4D8600301297 /* LaunchScreen.storyboard */; };
 		BE23BD95241F4D8600301297 /* fried_egg_makerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23BD94241F4D8600301297 /* fried_egg_makerTests.swift */; };
 		BE23BDA0241F4D8600301297 /* fried_egg_makerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23BD9F241F4D8600301297 /* fried_egg_makerUITests.swift */; };
 		BE23BDB02420CF0600301297 /* FrameTop.sks in Resources */ = {isa = PBXBuildFile; fileRef = BE23BDAF2420CF0600301297 /* FrameTop.sks */; };
@@ -60,7 +59,6 @@
 		BE23BD81241F4D8200301297 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		BE23BD84241F4D8200301297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BE23BD86241F4D8600301297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BE23BD89241F4D8600301297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BE23BD8B241F4D8600301297 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE23BD90241F4D8600301297 /* fried-egg-makerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "fried-egg-makerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE23BD94241F4D8600301297 /* fried_egg_makerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fried_egg_makerTests.swift; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				BE23BD83241F4D8200301297 /* Main.storyboard */,
 				BE23BD86241F4D8600301297 /* Assets.xcassets */,
 				BE5ACF70242D374A004E9614 /* Sounds */,
-				BE23BD88241F4D8600301297 /* LaunchScreen.storyboard */,
 				BE23BD8B241F4D8600301297 /* Info.plist */,
 				BE23BDAF2420CF0600301297 /* FrameTop.sks */,
 				BE99D67D2427704000085734 /* fail.sks */,
@@ -303,7 +300,6 @@
 				BE5ACF76242D4101004E9614 /* bgmgame.mp3 in Resources */,
 				BE99D67E2427704000085734 /* fail.sks in Resources */,
 				BE23BDB02420CF0600301297 /* FrameTop.sks in Resources */,
-				BE23BD8A241F4D8600301297 /* LaunchScreen.storyboard in Resources */,
 				BE5ACF7C242DD4D5004E9614 /* fail.mp3 in Resources */,
 				BE5ACF72242D3786004E9614 /* barnchick.mp3 in Resources */,
 				BE23BD7E241F4D8200301297 /* Actions.sks in Resources */,
@@ -379,14 +375,6 @@
 				BE23BD84241F4D8200301297 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BE23BD88241F4D8600301297 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BE23BD89241F4D8600301297 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

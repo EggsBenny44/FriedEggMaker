@@ -14,20 +14,26 @@ class GameOverScene: SKScene {
     var restartSquare = SKShapeNode()
     
     override func didMove(to view: SKView) {
-//        let background = SKSpriteNode(imageNamed: "background")
-//        background.position = CGPoint(x: -frame.size.width / 2, y: frame.size.height / 2)
-//        background.zPosition = 0
-//        addChild(background)
+
+        let frameTop = SKSpriteNode(imageNamed: "frame-top")
+        frameTop.scale(to: CGSize(width: frame.width, height: frameTop.frame.height))
+        frameTop.position = CGPoint(x: -self.frame.midX, y: frame.height / 2 - (frameTop.frame.height * 2))
+        frameTop.zPosition = 100
+        addChild(frameTop)
         
-        print ("width: \(frame.size.width)")
-        print ("height: \(frame.size.height)")
-        
+        let gameover = SKSpriteNode(imageNamed: "gameover")
+        let scale = (frame.width - 150) / gameover.frame.width
+        gameover.scale(to: CGSize(width: gameover.frame.width * scale, height:  gameover.frame.height * scale))
+        gameover.position = CGPoint(x: -self.frame.midX, y: frameTop.frame.minY - (gameover.frame.height / 2) + 5)
+        gameover.zPosition = -100
+
+        addChild(gameover)
+
         let gameeOverLabel = SKLabelNode(fontNamed: "Chalkduster")
         gameeOverLabel.text = "GAME OVER"
         gameeOverLabel.fontSize = 60
         gameeOverLabel.fontColor = SKColor.white
-        gameeOverLabel.position = CGPoint(x: -self.frame.midX, y: self.frame.midY + 300)
-        print ("label width: \(self.frame.size.width)")
+        gameeOverLabel.position = CGPoint(x: -self.frame.midX, y: self.frame.midY)
 
         gameeOverLabel.zPosition = 1
         addChild(gameeOverLabel)
@@ -36,7 +42,7 @@ class GameOverScene: SKScene {
         scoreLabel.text = "SCORE: \(global_score)"
         scoreLabel.fontSize = 30
         scoreLabel.fontColor = SKColor.white
-        scoreLabel.position = CGPoint(x: -self.frame.midX, y: self.frame.midY)
+        scoreLabel.position = CGPoint(x: -self.frame.midX, y: self.frame.midY - 100)
         scoreLabel.zPosition = 1
         addChild(scoreLabel)
         
@@ -52,12 +58,12 @@ class GameOverScene: SKScene {
         bestScoreLabel.fontSize = 30
         bestScoreLabel.fontColor = SKColor.white
         bestScoreLabel.zPosition = 1
-        bestScoreLabel.position = CGPoint(x: -self.frame.midX, y: self.frame.midY - 100)
+        bestScoreLabel.position = CGPoint(x: -self.frame.midX, y: self.frame.midY - 150)
         addChild(bestScoreLabel)
         
         let restartLabel = SKLabelNode(fontNamed: "Gill Sans")
         restartLabel.text = "TRY AGAIN?"
-        restartLabel.fontSize = 30
+        restartLabel.fontSize = 29
         restartLabel.fontColor = SKColor.white
         restartLabel.zPosition = 1
         restartLabel.position = CGPoint(x: -self.frame.midX, y: self.frame.midY - 300)
@@ -77,7 +83,7 @@ class GameOverScene: SKScene {
             let pointOfTouch = touch.location(in :self)
             if restartSquare.contains(pointOfTouch) {
                 global_score = 0
-                global_lives = 1
+                global_lives = 5
                 global_eggInterval = 10.0
                 Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(backToGameScene), userInfo: nil, repeats: false)
             }

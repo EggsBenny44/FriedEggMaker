@@ -71,21 +71,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.floor = SKSpriteNode(imageNamed: "floor")
         self.floor!.yScale = 2
         self.floor!.position = CGPoint(x: 0, y: -frame.height / 2 + floor!.frame.height - 120)
-print (floor!.position)
-        self.floor!.zPosition = -100
-        self.floor!.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: floor!.frame.width, height: floor!.frame.height))
+        self.floor!.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: floor!.frame.width, height: floor!.frame.height - 10))
         self.floor!.physicsBody?.categoryBitMask = floorCategory
         self.floor!.physicsBody?.contactTestBitMask = eggCategory + chickCategory
         self.floor!.physicsBody?.collisionBitMask = 0
         self.floor!.physicsBody?.affectedByGravity = false
         self.floor!.physicsBody?.allowsRotation = false
         self.floor!.physicsBody?.pinned = true
-        
+        self.floor!.zPosition = -100
+
         addChild(self.floor!)
 
         self.chef = SKSpriteNode(imageNamed: "chef-left")
         self.chef!.scale(to: CGSize(width: frame.width / 5, height: frame.width / 5))
-        self.chef!.position = CGPoint(x: 0, y: self.floor!.frame.maxY + self.chef!.frame.height - 2)
+        self.chef!.position = CGPoint(x: 0, y: self.floor!.frame.maxY + self.chef!.frame.height / 2)
         self.chef!.physicsBody = SKPhysicsBody(circleOfRadius: self.chef!.frame.width * 0.1)
 
         self.chef!.physicsBody?.categoryBitMask = chefCategory
@@ -111,7 +110,7 @@ print (floor!.position)
         let bestScoreLabel = SKLabelNode(text: "Best Score: \(bestScore)")
         bestScoreLabel.fontName = "Chalkduster"
         bestScoreLabel.fontSize = 20
-        bestScoreLabel.position = scoreLabel.position.applying(CGAffineTransform(translationX: 0, y: -bestScoreLabel.frame.height * 1.5))
+        bestScoreLabel.position = scoreLabel.position.applying(CGAffineTransform(translationX: 5, y: -bestScoreLabel.frame.height * 1.5))
         addChild(bestScoreLabel)
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { _ in
@@ -132,10 +131,6 @@ print (floor!.position)
 
         self.rectBird!.zPosition = 101
         addChild(self.rectBird!)
-
-        print("width:\(frame.width)")
-        print("height:\(frame.height)")
-        print("bird:\(self.rectBird!.position)")
 
         let rightMoveAction = SKAction.move(to: CGPoint(x: self.frame.maxX - 5, y: rectBird!.frame.minY), duration: 5.0)
         let leftMoveAction = SKAction.move(to: CGPoint(x: self.frame.minX + 5, y: rectBird!.frame.minY), duration: 5.0)
@@ -178,6 +173,7 @@ print (floor!.position)
         chick.physicsBody?.categoryBitMask = chickCategory
         chick.physicsBody?.contactTestBitMask = floorCategory + chefCategory
         chick.physicsBody?.collisionBitMask = 0
+        chick.zPosition = 10
         addChild(chick)
         
         let beginingAction = SKAction.setTexture(SKTexture(imageNamed: "egg02"), resize: false)
@@ -205,6 +201,7 @@ print (floor!.position)
         egg.physicsBody?.categoryBitMask = eggCategory
         egg.physicsBody?.contactTestBitMask = floorCategory + chefCategory
         egg.physicsBody?.collisionBitMask = 0
+        egg.zPosition = 11
         addChild(egg)
 
         let beginingAction = SKAction.setTexture(SKTexture(imageNamed: "egg02"), resize: false)
@@ -229,6 +226,7 @@ print (floor!.position)
         egg.physicsBody?.categoryBitMask = doubleEggCategory
         egg.physicsBody?.contactTestBitMask = floorCategory + chefCategory
         egg.physicsBody?.collisionBitMask = 0
+        egg.zPosition = 12
         addChild(egg)
         
         let beginingAction = SKAction.setTexture(SKTexture(imageNamed: "egg02"), resize: false)
@@ -254,6 +252,7 @@ print (floor!.position)
         egg.physicsBody?.categoryBitMask = goldEggCategory
         egg.physicsBody?.contactTestBitMask = floorCategory + chefCategory
         egg.physicsBody?.collisionBitMask = 0
+        egg.zPosition = 13
         addChild(egg)
         
         let move = SKAction.moveTo(y: -frame.height / 2 - egg.frame.height, duration: eggsDuration)
@@ -355,25 +354,6 @@ print (floor!.position)
                 self.run(sequenceAction)
 
             } else if first.categoryBitMask == chickCategory {
-                print("fail: \(global_lives)")
-                
-//                global_lives = global_lives - 1
-//
-//                var updateTextureAction: SKAction
-//                updateTextureAction = SKAction.setTexture(textureBarnedChick, resize: false)
-//                guard let fail = SKEmitterNode(fileNamed: "fail") else { return }
-//                fail.position = firstNode.position
-//                firstNode.run(failSound)
-//                addChild(fail)
-//                let sequenceAction = SKAction.sequence([barnChickSound, updateTextureAction])
-//                firstNode.run(sequenceAction)
-//                self.run(SKAction.wait(forDuration: 1.0)) {
-//                    fail.removeFromParent()
-//                    firstNode.removeFromParent()
-//                }
-//
-                
-                
                 
                 global_lives = global_lives - 1
                 firstNode.run(barnChickSound)
@@ -382,16 +362,6 @@ print (floor!.position)
                 
                 firstNode.run(updateTextureAction)
                 self.addFailEffect(pos: firstNode.position)
-                
-                
-//                let failEffectAction = SKAction.run {
-//                    self.addFailEffect(pos: firstNode.position)
-//                }
-//
-//                let removeAction = SKAction.removeFromParent()
-            
-//                let sequenceAction = SKAction.sequence([updateTextureAction, failEffectAction, removeAction, SKAction.wait(forDuration: 0.5)])
-//                firstNode.run(sequenceAction)
                 guard let life = lives.last else { return }
                 life.removeFromParent()
                 lives.removeLast()
@@ -415,12 +385,13 @@ print (floor!.position)
                 let sequenceAction = SKAction.sequence([updateTextureAction, removeAction])
                 firstNode.run(sequenceAction)
             } else {
+                let fallAction = SKAction.moveTo(y: firstNode.frame.minY - 5, duration: 0.5)
                 let moveAction = SKAction.moveTo(x: -frame.width / 2, duration: 0.5)
-                firstNode.run(moveAction) {
+                let sequenceAction = SKAction.sequence([fallAction, moveAction])
+                firstNode.run(sequenceAction) {
                     firstNode.removeFromParent()
                 }
             }
-            
         }
     }
 
@@ -440,30 +411,6 @@ print (floor!.position)
         let changeSceneSequence = SKAction.sequence([waitToChangeScene, changeSceneAction])
         
         run(changeSceneSequence)
-    }
-    
-    func touchDown(atPoint pos : CGPoint) {
-//        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-//            n.position = pos
-//            n.strokeColor = SKColor.green
-//            self.addChild(n)
-//        }
-    }
-    
-    func touchMoved(toPoint pos : CGPoint) {
-//        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-//            n.position = pos
-//            n.strokeColor = SKColor.blue
-//            self.addChild(n)
-//        }
-    }
-    
-    func touchUp(atPoint pos : CGPoint) {
-//        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-//            n.position = pos
-//            n.strokeColor = SKColor.red
-//            self.addChild(n)
-//        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -495,31 +442,4 @@ print (floor!.position)
             chef?.position.x = CGFloat(lastPos)
         }
     }
-    
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        for touch in touches
-//        {
-//            let toucLocation = touch.location(in: self)
-//            if toucLocation.x > center! {
-//                chefLeft?.position.x = toucLocation.x
-//                chefLeft?.isHidden = false
-//                chefRight?.isHidden = true
-//            }else{
-//                chefRight?.position.x = toucLocation.x
-//                chefRight?.isHidden = false
-//                chefLeft?.isHidden = true
-//            }
-//        }
-    }
-    
-    override func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
-    
-    
-    override func update(_ currentTime: TimeInterval) {
-        // Called before each frame is rendered
-    }
-
-    
 }

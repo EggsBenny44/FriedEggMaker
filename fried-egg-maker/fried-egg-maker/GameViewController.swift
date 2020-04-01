@@ -30,9 +30,6 @@ class GameViewController: UIViewController {
                     // Present the scene
                     view.presentScene(scene)
                 }
-                
-                
-                
                 view.showsFPS = false
                 view.showsNodeCount = false
             }
