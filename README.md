@@ -1,6 +1,5 @@
 # Name
 Egg Catcher
-swift application
 
 ## Description
 This application is created by Swift with SpriteKit.
