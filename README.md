@@ -1,6 +1,6 @@
 # Name
 Egg Catcher
-![splash](https://github.com/EggsBenny44/FriedEggMaker/blob/images/images/01_Splash.png)
+<img src="https://github.com/EggsBenny44/FriedEggMaker/blob/images/images/01_Splash.png" width="320px">
 
 ## Description
 This application is created by Swift with SpriteKit.
@@ -10,16 +10,16 @@ If the player catches a chick, life will be lost but catching a gold egg success
 ## Features
 - Splash
 - Menu ViewController
-![menu](https://github.com/EggsBenny44/FriedEggMaker/blob/images/images/02_MenuScene.png)
+<img src="https://github.com/EggsBenny44/FriedEggMaker/blob/images/images/02_MenuScene.png" width="320px">
 
 - Game Scene
-![game](https://github.com/EggsBenny44/FriedEggMaker/blob/images/images/05_CatchDoubleYolksEgg.png)
+<img src="https://github.com/EggsBenny44/FriedEggMaker/blob/images/images/05_CatchDoubleYolksEgg.png" width="320px">
 
 - Bonus Scene
-![bonus](https://github.com/EggsBenny44/FriedEggMaker/blob/images/images/08_BonusScene.png)
+<img src="https://github.com/EggsBenny44/FriedEggMaker/blob/images/images/08_BonusScene.png" width="320px">
 
 - GameOver Scene
-![gameover](https://github.com/EggsBenny44/FriedEggMaker/blob/images/images/09_GameOverScene.png)
+<img src="https://github.com/EggsBenny44/FriedEggMaker/blob/images/images/09_GameOverScene.png" width="320px">
 
 ## Requirement
  - iPhone 6 ~ 11
